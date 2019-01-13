@@ -123,7 +123,7 @@ a:hover {
   margin: 20px 0;
 }
 
-.titles {
+.titles p{
   font-family: Charm, sans-serif;
   margin: 20px 0;
 }
@@ -144,5 +144,18 @@ a:hover {
 }
 
 .back-button{
-  font-family: inherit;
+  margin-bottom: 50px;
+}
+
+#error_explanation {
+  color: red;
+  font-size: 20px;
+  text-align: center;
+}
+
+.field_with_errors{
+  font-size: 20px;
+  text-align: center;
+  font-family: Charm, sans-serif;
+  width: 100%
 }

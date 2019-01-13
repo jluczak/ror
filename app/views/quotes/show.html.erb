@@ -28,6 +28,7 @@
 <div class="quote-form">
 <h2 class="new-quote-title">Add a comment:</h2>
 <%= form_with(model: [ @quote, @quote.comments.build ], local: true) do |form| %>
+<div class="titles">
   <p>
     <%= form.label :commenter %><br>
     <%= form.text_field :commenter, class: 'form-control' %>
@@ -36,6 +37,7 @@
     <%= form.label :body %><br>
     <%= form.text_area :body, class: 'form-control' %>
   </p>
+  </div>
   <p>
     <%= form.submit "Create Comment", :class=>"btn btn-secondary" %>
   </p>
