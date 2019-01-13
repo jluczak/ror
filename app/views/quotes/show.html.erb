@@ -1,31 +1,46 @@
+<div class="container-fluid mt-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="app-title">Daily Inspirational Quotes to Start Your Day</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br><br><br><br>
+<table class="quote-container">
+    <tr class="quote-title" >
+      <td ><%= @quote.title %></td>
+    </tr>
+    <tr><td class = "quote-icon1"><%=image_tag('quote1.png')%> </td></tr>
+    <tr class="quote-text"><td>
+        <p><%= @quote.text %></p>
+        </td>
+    </tr>
+    <tr><td class = "quote-icon2"><%=image_tag('quote2.png')%> </td></tr>
+    <tr><td><br /><br /></td></tr>
+</table>
 
-<p>
-  <strong>Title:</strong>
-  <%= @quote.title %>
-</p>
+<h2 class="new-quote-title">Comments</h2>
+<p><%= render @quote.comments %></p>
 
-<p>
-  <strong>Text:</strong>
-  <%= @quote.text %>
-</p>
-
-<h2>Comments</h2>
-<%= render @quote.comments %>
-
-<h2>Add a comment:</h2>
+<div class="quote-form">
+<h2 class="new-quote-title">Add a comment:</h2>
 <%= form_with(model: [ @quote, @quote.comments.build ], local: true) do |form| %>
   <p>
     <%= form.label :commenter %><br>
-    <%= form.text_field :commenter %>
+    <%= form.text_field :commenter, class: 'form-control' %>
   </p>
   <p>
     <%= form.label :body %><br>
-    <%= form.text_area :body %>
+    <%= form.text_area :body, class: 'form-control' %>
   </p>
   <p>
-    <%= form.submit %>
+    <%= form.submit "Create Comment", :class=>"btn btn-secondary" %>
   </p>
 <% end %>
 
 <%= link_to 'Edit', edit_quote_path(@quote) %> |
-<%= link_to 'Back', quotes_path %>
+<p><button class="btn btn-secondary back-button"><%= link_to 'Back', quotes_path %></button></p>
+</div>

@@ -68,6 +68,7 @@ a:hover {
   margin: 0 auto;
   margin-bottom: 20px;
   width: 70%;
+  opacity: 0.9;
 
 }
 .quote-title{
@@ -106,4 +107,42 @@ a:hover {
 }
 .quote-icon2 img{
   width: 50px;
+}
+
+.new-quote-title {
+  font-family: Charm, sans-serif;
+  font-size: 36px;
+  color: gray;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.quote-form p{
+  font-size: 20px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.titles {
+  font-family: Charm, sans-serif;
+  margin: 20px 0;
+}
+.form-control{
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.35);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.35);
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.35);
+  width: 30%;
+  margin: 0 auto;
+  float: none;
+}
+
+.comment-titles p{
+  margin: 20px 0;
+  font-size: 20px;
+  text-align: center;
+  color: gray;
+}
+
+.back-button{
+  font-family: inherit;
 }

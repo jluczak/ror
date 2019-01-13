@@ -13,19 +13,19 @@
       </ul>
     </div>
   <% end %>
-
+<div class="titles">
   <p>
     <%= form.label :title %><br>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: 'form-control'%>
   </p>
 
   <p>
     <%= form.label :text %><br>
-    <%= form.text_area :text %>
+    <%= form.text_area :text, class: 'form-control' %>
   </p>
-
-  <p>
-    <%= form.submit %>
-  </p>
+</div>
+<p>
+    <%= form.submit "Create Quote", :class=>"btn btn-secondary" %>
+</p>
 
 <% end %>
