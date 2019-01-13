@@ -1,24 +1,51 @@
 
-<h1>Listing quotes</h1>
-<%= link_to 'New quote', new_quote_path %>
+<div class="container-fluid mt-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="app-title">Daily Inspirational Quotes to Start Your Day</h1>
+        <div class="add-new">
+          <%= link_to new_quote_path do %>
+          <%= image_tag "quote-add.png"%>
+          <h2>Add new quote</h2>
+          <% end %>
+        </div>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th colspan="2"></th>
-    <th></th>
-  </tr>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+
+
 
   <% @quotes.each do |quote| %>
-    <tr>
-      <td><%= quote.title %></td>
-      <td><%= quote.text %></td>
-      <td><%= link_to 'Show', quote_path(quote) %></td>
-      <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
-      <td><%= link_to 'Destroy', quote_path(quote),
+  <table class="quote-container">
+      <tr class="quote-title" >
+        <td ><%= quote.title %></td>
+      </tr>
+      <tr><td class = "quote-icon1"><%=image_tag('quote1.png')%> </td></tr>
+      <tr class="quote-text"><td>
+          <p><%= quote.text %></p>
+          </td>
+      </tr>
+      <tr><td class = "quote-icon2"><%=image_tag('quote2.png')%> </td></tr>
+      <tr><td><br /><br /></td></tr>
+      <tr>
+      <td>
+      <button class="btn btn-secondary"><%= link_to 'Show', quote_path(quote) %></button>
+        <button class="btn btn-secondary"><%= link_to 'Edit', edit_quote_path(quote) %></button>
+      <button class="btn btn-secondary"><%= link_to 'Destroy', quote_path(quote),
         method: :delete,
-        data: { confirm: 'Are you sure?' } %></td>
-    </tr>
+        data: { confirm: 'Are you sure?' } %></button>
+      </td>
+        </tr>
+        </table>
   <% end %>
-</table>
+
+</div>
+</div>
+</div>

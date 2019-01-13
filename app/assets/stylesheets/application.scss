@@ -1,0 +1,109 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+@import "bootstrap";
+body {
+  background-image: image-url('background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+p {
+  margin-bottom: 0;
+}
+tbody {
+  width: 100%;
+  display: block;
+}
+tr {
+  width: 100%;
+  display: block;
+}
+a {
+  color: #fff;
+}
+a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.app-title {
+  font-family: Charm, sans-serif;
+  text-align: center;
+  font-size: 60px;
+  color: gray;
+  font-style: italic;
+}
+.add-new {
+  text-align: center;
+  display: block;
+  margin: 30px 0;
+
+}
+.add-new h2 {
+  font-family: Charm, sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+}
+.add-new:hover h2 {
+  color: gray;
+}
+
+.quote-container {
+  padding: 25px 50px;
+  display: block;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.35);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.35);
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.35);
+  background: #ededed;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 70%;
+
+}
+.quote-title{
+  font-family: Charm, sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+  color: #6c757d;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+.quote-title td {
+  width: 100%;
+  display: block;
+}
+.quote-text {
+  width: 100%;
+  display: block;
+}
+.quote-text p{
+  width: 100%;
+  font-family: Charm, sans-serif;
+  font-size: 18px;
+  padding: 0 75px;
+  text-align: center;
+}
+.quote-text td {
+  width: 100%;
+  display: block;
+}
+.quote-icon1 img{
+  width: 50px;
+}
+.quote-icon2 {
+  float: right;
+}
+.quote-icon2 img{
+  width: 50px;
+}
